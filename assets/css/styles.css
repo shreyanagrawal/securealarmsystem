@@ -1543,6 +1543,11 @@ button {
 
   .main-nav.open {
     transform: translateX(0);
+    height: 100vh;
+  }
+
+  .overflowYhidden{
+    overflow-y: hidden !important;
   }
 
   .main-nav>ul {
