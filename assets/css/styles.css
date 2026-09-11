@@ -1546,6 +1546,10 @@ button {
     height: 100vh;
   }
 
+  .dropdown li a{
+    color: #fff !important;
+  }
+
   .overflowYhidden{
     overflow-y: hidden !important;
   }
