@@ -1,0 +1,4 @@
+$(function () {
+    $("#phone").on("input", function () { let v = $(this).val().replace(/\D/g, "").slice(0, 10); if (v.length > 6) v = "(" + v.slice(0, 3) + ") " + v.slice(3, 6) + "-" + v.slice(6); else if (v.length > 3) v = "(" + v.slice(0, 3) + ") " + v.slice(3); $(this).val(v) });
+    $("#quoteForm").on("submit", function (e) { e.preventDefault(); let ok = true; $(this).find("input").css("border-color", "#bbb"); if (!$.trim($("[name=name]").val())) ok = false; if ($("[name=phone]").val().replace(/\D/g, "").length !== 10) ok = false; if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($("[name=email]").val())) ok = false; if (!ok) { $(".msg").text("Please complete the required fields correctly.").css({ display: "block", background: "#fff1f2", color: "#a4002f" }); return } $(".msg").text("Thank you. Your quote request has been submitted.").css({ display: "block", background: "#eefaf1", color: "#176b35" }); this.reset() });
+});
