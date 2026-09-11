@@ -1551,6 +1551,11 @@ button {
     color: #fff !important;
   }
 
+  .dropdown li a:hover{
+    color: var(--brass) !important;
+    background-color: transparent !important;
+  }
+
   .overflowYhidden{
     overflow-y: hidden !important;
   }
