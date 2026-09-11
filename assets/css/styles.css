@@ -191,6 +191,7 @@ button {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, .07);
   transition: box-shadow .2s ease, background .2s ease;
+  width: 100%;
 }
 
 .site-header.scrolled {
