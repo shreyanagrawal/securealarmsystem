@@ -12,9 +12,11 @@ $(function () {
   /* ---------- 1. Mobile menu toggle ---------- */
   var $menuToggle = $('#menuToggle');
   var $mainNav    = $('#mainNav');
+  var $html = $('html')
 
   $menuToggle.on('click', function () {
     var isOpen = $mainNav.toggleClass('open').hasClass('open');
+    isOpen ? $html.addClass('overflowYhidden'):$html.removeClass('overflowYhidden');
     $(this).attr('aria-expanded', isOpen);
   });
 
